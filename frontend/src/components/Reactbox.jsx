@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import styles from './Reactbox.module.css'
 import Lightning from '../assets/icons8-lightning-bolt-96.png'
 import Refresh from '../assets/icons8-refresh-480.png'
+import LineChart from './LineChart'
 export default function Reactbox() {
     // setup the state
     const [state, setState] = useState({
@@ -15,7 +16,7 @@ export default function Reactbox() {
         disabled: false,
         reacted: false,
         prev: [],
-        previ: false,
+        previ: 0,
     })
 
     // functions
@@ -91,7 +92,13 @@ export default function Reactbox() {
                     </button>
                 </div>
             </div>
-            {console.log(state.prev)}
+            <div className={styles.test_chart_container}>
+                <div className={styles.test_chart_wrapper}>
+                    <div className={styles.chart}>
+                        <LineChart prev={state.prev}/>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
