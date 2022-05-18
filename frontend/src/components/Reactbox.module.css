@@ -125,3 +125,10 @@
     width: 30px;
     height: 30px;
 }
+
+.chart {
+    width: 813px;
+    height: 406px;
+    margin: auto;
+    padding: 10px;
+}
