@@ -27,20 +27,20 @@ export default function LineChart({prev}) {
     }
     
     return (
-            <Line
-                data={state}
-                options={{
-                    title: {
-                        display: true,
-                        text: 'Average Reaction Time',
-                        fontSize: 20
-                    },
-                    legend: {
-                        display: true,
-                        position: 'right'
-                    }
-                }}
-            />
+        <Line
+            data={state}
+            options={{
+                title: {
+                    display: true,
+                    text: 'Average Reaction Time',
+                    fontSize: 20
+                },
+                legend: {
+                    display: true,
+                    position: 'right'
+                }
+            }}
+        />
     )
 }
 
