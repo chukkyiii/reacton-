@@ -24,3 +24,5 @@ yarn-error.log*
 sc
 .vscode/launch.json
 frontend/test.js
+
+env
