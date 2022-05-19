@@ -2,21 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import {
-  Reactbox,
-  Navigation
-} from "./components"
+import App from './App';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Router>
-      <Navigation />
-      <Routes>
-        <Route path="/" element={<Reactbox />} />
-      </Routes>
-    </Router>
+    <App />
   </React.StrictMode>
 );
 
