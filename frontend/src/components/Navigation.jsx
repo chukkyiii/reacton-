@@ -1,13 +1,17 @@
 import React from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import styles from './Navigation.module.css'
+import useToken from './useToken'
 
 export default function Navigation() {
+    const location = useLocation()
+    const {token} = useToken()
     const menu = [
-        {title: 'Home', path: '/'},
+        { title: 'Home', path: '/' },
+        { title: 'About', path: '/about' },
+        { title: !token && token !== "" && token !== undefined ? 'Login' : 'Profile', path: !token && token !== "" && token !== undefined ? '/login' : '/profile' },
     ]
 
-    const location = useLocation()
     return (
         <div>
             <div className={styles.container}>
