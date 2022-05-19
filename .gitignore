@@ -26,3 +26,4 @@ sc
 frontend/test.js
 
 env
+*.pyc
