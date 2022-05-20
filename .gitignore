@@ -27,3 +27,4 @@ frontend/test.js
 
 env
 *.pyc
+backend/config.py
