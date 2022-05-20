@@ -1,0 +1,26 @@
+.container { 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.button_highlight {
+    background-color: #00c0ce;
+    padding: 1rem 1.5rem;
+    margin: 1.75rem auto;
+    border-radius: 4px;
+    border: none;
+    font: inherit;
+    transition: all 0.2s ease 0s;
+}
+
+.button_highlight:hover {
+    background-color: #00b8c5e3;
+    transition: all 0.2s ease 0s;
+}
+
+/* .container label {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    z-index: 0;
+} */

@@ -33,10 +33,27 @@ li, a {
 }
 
 a:active {
-  background-color: #2a2a2a;
+  background-color: var(--for-colour);
 }
 
 * {
   box-sizing: border-box;
   color: var(--text-colour);
+}
+
+input {
+  outline: 0;
+  transition: .2s;
+  margin: 0.5rem 0;
+  width: 22rem;
+  height: 3.5rem;
+  font-size: 18px;
+  background-color: var(--bg-colour);
+  border: 2px solid var(--for-colour);
+  border-radius: 4px;
+  padding-left: 22px;
+}
+
+input:focus {
+  border: 2px solid var(--blue-0);
 }
