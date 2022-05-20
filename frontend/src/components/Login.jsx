@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import styles from "./Login.module.css";
 
 function Login(props) {
   const navigate = useNavigate();
   const [loginForm, setloginForm] = useState({
-    email: "",
+    username: "",
     password: ""
   })
 
@@ -14,7 +15,7 @@ function Login(props) {
       method: "POST",
       url: "/token",
       data: {
-        email: loginForm.email,
+        username: loginForm.username,
         password: loginForm.password
       }
     })
@@ -31,7 +32,7 @@ function Login(props) {
       })
 
     setloginForm(({
-      email: "",
+      username: "",
       password: ""
     }))
 
@@ -47,23 +48,22 @@ function Login(props) {
   }
 
   return (
-    <div>
+    <div className={styles.container}>
       <h1>Login</h1>
-      <form className="login">
+      <form className={styles.container}>
         <input onChange={handleChange}
-          type="email"
-          text={loginForm.email}
-          name="email"
-          placeholder="Email"
-          value={loginForm.email} />
+          type="username"
+          text={loginForm.username}
+          name="username"
+          placeholder="Username"
+          value={loginForm.username} />
         <input onChange={handleChange}
           type="password"
           text={loginForm.password}
           name="password"
           placeholder="Password"
           value={loginForm.password} />
-
-        <button onClick={logMeIn}>Submit</button>
+        <button className={styles.button_highlight} onClick={logMeIn}>Submit</button>
       </form>
     </div>
   );
